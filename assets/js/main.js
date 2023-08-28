@@ -40,6 +40,7 @@ const allowedEmails = ['andrea@gmail.com', 'gianni@gmail.com', 'luca@libero.it',
 const confirmBtn = document.getElementById('confirm');
 let userEmail = document.getElementById('emailDOM');
 const allowedEmails = ['andrea@gmail.com', 'gianni@gmail.com', 'luca@libero.it', 'sara@yahoo.it'];
+let x;
 
 confirmBtn.addEventListener("click", function () {
     userEmail = userEmail.value;
@@ -49,13 +50,17 @@ confirmBtn.addEventListener("click", function () {
 
         if (userEmail === email){
             console.log("Benvenuto/a," + userEmail);
-        } else {
-            console.log("La tua email non risulta registrata");
-        }
-    }
+            x = true;
+        } 
+           
         
     }
-
+        if (x !== true) {
+         console.log("La tua email non risulta registrata");
+        }
+        
+    }
+        
  )
-
+   
 
