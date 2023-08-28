@@ -23,21 +23,32 @@ Chiedi all'utente la sua email, controlla che sia nella lista
 di chi può accedere, stampa un messaggio appropriato sull’esito 
 del controllo.*/
 
-const userEmail = prompt("Inserisci la tua email")
+/*const userEmail = prompt("Inserisci la tua email")
 
 const allowedEmails = ['andrea@gmail.com', 'gianni@gmail.com', 'luca@libero.it', 'sara@yahoo.it'];
 
-/*for (let i = 0; i < allowedEmails.length; i++) {
-    const email = allowedEmails[i];*/
 
-    if (userEmail === allowedEmails[0] || userEmail === allowedEmails[1] || userEmail === allowedEmails[2] || userEmail === allowedEmails[3]) {
+    if (allowedEmails.includes(userEmail)){
         console.log("Benvenuto/a," + userEmail);
     } else {
         console.log("La tua email non risulta registrata");
     }
-
+*/
    
+// bottone e input
 
+const confirmBtn = document.getElementById('confirm');
+let userEmail = document.getElementById('emailDOM');
+const allowedEmails = ['andrea@gmail.com', 'gianni@gmail.com', 'luca@libero.it', 'sara@yahoo.it'];
 
+confirmBtn.addEventListener("click", function () {
+    userEmail = userEmail.value;
+
+    if (allowedEmails.includes(userEmail)){
+        console.log("Benvenuto/a," + userEmail);
+    } else {
+        console.log("La tua email non risulta registrata");
+    }
+})
 
 
