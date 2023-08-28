@@ -44,11 +44,18 @@ const allowedEmails = ['andrea@gmail.com', 'gianni@gmail.com', 'luca@libero.it',
 confirmBtn.addEventListener("click", function () {
     userEmail = userEmail.value;
 
-    if (allowedEmails.includes(userEmail)){
-        console.log("Benvenuto/a," + userEmail);
-    } else {
-        console.log("La tua email non risulta registrata");
+    for (let i = 0; i < allowedEmails.length; i++) {
+        const email = allowedEmails[i];
+
+        if (userEmail === email){
+            console.log("Benvenuto/a," + userEmail);
+        } else {
+            console.log("La tua email non risulta registrata");
+        }
     }
-})
+        
+    }
+
+ )
 
 
